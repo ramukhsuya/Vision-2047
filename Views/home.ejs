@@ -1,0 +1,264 @@
+<%-include("partials/header") -%>
+    <div class="container-fluid header">
+        <div class="heading-box">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h1 class="header-title-1">Let's begin on a journey to save Earth</h1>
+                    <p class="header-para">"Our Earth faces its biggest danger in form of climate change and it's time to act.
+                        We as inhibitants of earth must come together to secure our future.Therefore we have creted<span class="para-title">Vision-2047</span>aligned
+                            with Indian government plans to drastically reduce Carbon footprint by 2047 the hundredth year of our independence."</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img class="home-image"src="/images/graph.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="countdown-container" >
+        <h1 class="clock-heading">Carbon clock is ticking</h1>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 countdown-item">
+        <p id="years"></p>
+        <p class="countdown-label"> Years </p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 countdown item">
+            <p id="months"></p>
+            <p class="countdown-label"> Months</p>
+            </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 countdown-item">
+        <p id="days"></p>
+        <p class="countdown-label"> Days</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 countdown-item">
+        <p id="hours"></p>
+        <p class="countdown-label"> Hours</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 countdown-item">
+        <p id="minutes"></p>
+        <p class="countdown-label">Minutes </p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 countdown-item">
+        <p id="seconds"></p>
+        <p class="countdown-label"> Seconds</p>
+        </div>
+    </div>
+    <h2 class="clock-subheading">It's time to act</h2>
+    <p class="clock-para">The Carbon Clock shows how long it will take for the global average temperature to rise by 1.5 °C compared to the pre-industrial era at the current CO₂ emission rate. In the event that we fail to meet this target,our earth faces dire consequences such as sea level rise,extreme weather event and disruption of ecosystem which trigger an unctrollable sequence of chain reaction that will culminate in destruction of our planet.    </p>
+    </div>
+    <script>
+        var countDownDate = new Date("Jan 1, 2040 00:00:00").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+            var months = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24*30));
+            var days = Math.floor((distance % (1000 * 60 * 60 * 24*30)) / (1000 * 60 * 60*24));
+            var hours = Math.floor((distance % (1000 * 60 * 60*24)) / (1000 * 60*60));
+            var minutes = Math.floor((distance % (1000 * 60*60)) / (1000*60));
+            var seconds=  Math.floor((distance % (1000 * 60)/ 1000));
+
+            document.getElementById("years").innerHTML = years;
+            document.getElementById("months").innerHTML = months;
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("years").innerHTML = "EXPIRED";
+                document.getElementById("days").innerHTML = "EXPIRED";
+                document.getElementById("hours").innerHTML = "EXPIRED";
+                document.getElementById("minutes").innerHTML = "EXPIRED";
+                document.getElementById("seconds").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+     <div class="objective">
+        <section id="features">
+            <div class="container-fluid feature">
+                <h1 class="objective-heading">Our Objectives</h1>
+                <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card objective-card"style="width: 20rem;">
+                        <i class=" icons fas fa-solar-panel fa-4x"></i>
+                        <div class="card-body">
+                            <h3 class="card-title">Renew</h3>
+                            <p class="card-text">Renewal epitomizes the ongoing commitment to sustainability, emphasizing regeneration and resource replenishment. It involves embracing renewable energy, conservation efforts, and ecosystem restoration to foster harmony between humanity and the environment. Through these actions, renewal ensures the preservation of natural resources for generations to come.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card objective-card" style="width: 20rem;">
+                        <i class=" icons fas fa-bus fa-4x"></i>
+                        <div class="card-body">
+                            <h3 class="card-title">Minimize</h3>
+                            <p class="card-text">Minimizing carbon footprints involves reducing greenhouse gas emissions through sustainable practices like energy conservation and eco-friendly transportation. By transitioning to renewable energy sources and embracing efficient lifestyles, we actively combat climate change and safeguard the planet's health for generations to come</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card objective-card" style="width: 20rem;">
+                        <i class=" icons fas fa-tree fa-4x"></i>
+                        <div class="card-body">
+                            <h3 class="card-title">Sustain</h3>
+                            <p class="card-text">Sustainability balances current needs with future resource preservation, emphasizing renewable energy, waste reduction, and eco-friendly practices. Prioritizing sustainability fosters a world where humanity and nature coexist harmoniously, ensuring abundance and resilience for future generations.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    <div id="plans">
+        <div class="container" style="text-align: center;">
+            <h1 class="plans-title" style="color: #FFF6E9 ;">Save The Future</h2>
+                <div class="row">
+                    <div class="log-in col-lg-6 col-md-12 "
+                        >
+                        <div class="individual-plans card" style="width:18rem; margin:auto;margin-top: 7%;">
+                            <div class="card-header">
+                                <img class="card-image" src="/images/individual-card.jpeg" alt="" style="border-radius: 2%;">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Singular Plans</h3>
+                                <p class="card-body">Uncover environmentally-conscious lifestyle suggestions, delve into sustainable transportation alternatives, and locate tools to diminish your daily environmental impact.</p>
+                                <div class="d-grid gap-2">
+                                    <a href="/calculator"><button class="btn btn-primary" type="button">Explore</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="log-in col-lg-6 business-cards col-md-12" >
+                        <div class="business-plans card" style="width: 18rem; margin:auto;margin-top: 7%;">
+                            <div class="card-header">
+                                <img class="card-image" src="/images/business-card.jpeg" alt="" style="border-radius: 2%;">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Industrial Plans</h3>
+                                <p class="card-body">Integrate technologies for tracking carbon offset, cultivate practices that are carbon-neutral, and leverage resources to fulfill your objectives in sustainability.
+                                    carbon-neutral practices to achieve your sustainability goals.
+                                </p>
+                                <div class="d-grid gap-2">
+                                    <a href="/industry-calculator"><button class="btn btn-primary" type="button">Explore</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="testimonials" >
+        <h1 class="testimonial-heading">Our Supporters</h1>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"  data-bs-interval="2000">
+                    <img src="images/Caro-1.jpeg" alt="dog-profile" class="testimonial-image">
+                    <p class="testimonial-text">"Vision-2047 has brought about a phenomenal positive impact on our comapny's
+                        carbon emissions.With their scientific and technical advices we were really able to contribute to 
+                        our planet's future. We are thankful for their partnership."</p>
+                    <em style=" color:#000">~Kiran, CEO of Biocon</em>
+                </div>
+                <div class="carousel-item"  data-bs-interval="2000">
+                    <img src="images/Caro-2.jpeg" alt="dog-profile" class="testimonial-image">
+
+                    <p class="testimonial-text">"We throughouly enjoyed working with Vision-2047 on reducing our carbon emissions
+                        with an eye on meeting government deadline for creatin a clean and green planet .Their user-friendly
+                        website alowed us to implement their suggestion.Very grtaeful to work with them."</p>
+                    <em style=" color:#000">~Indra,CEO of Sustainibilty department at PepsiCo</em>
+                </div>
+                <div class="carousel-item"  data-bs-interval="2000">
+                    <img src="images/Caro-3.jpeg" alt="dog-profile" class="testimonial-image">
+
+                    <p class="testimonial-text">"Working alongside Vision-2047 has been a remarkable experience. Their
+                         expertise in guiding us towards reducing carbon emissions has been invaluable, especially in meeting
+                          government mandates for a sustainable future."Proud to Work with them.
+                    </p>
+                        <em style=" color:#000">~Anand, Sustainability Management Director at Enterprises</em>
+                </div>
+                <div class="carousel-item"  data-bs-interval="2000">
+                    <img src="images/Caro-4.jpeg" alt="dog-profile" class="testimonial-image">
+
+                    <p class="testimonial-text">"Vision-2047 was a nice and pleasant addition to our list of partners.
+                        Their technical suggestion made it possible for us to cut down on carbon footprints with
+                        their beautiful offseting solutions.Really enjoyed parnering with them"
+                    </p>
+                        <em style=" color:#000">~Uday, CEO of Eco-friendly Solutions </em>
+                </div>
+                <div class="carousel-item"  data-bs-interval="2000">
+                    <img src="images/Caro-5.jpeg" alt="dog-profile" class="testimonial-image">
+
+                    <p class="testimonial-text">"Our expereince of parnerinf with Vision-2047 has been exceptional
+                        in regards with their suggestion for cutting down carbon footprints and for providing various 
+                        offseeting ventures "
+                    </p>
+                        <em style=" color:#000">~Sunil, Managing Director at GreenTech vision</em>
+                </div>
+            </div>
+            <button class="carousel-control-prev but-slide" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next but-slide" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="press" style="padding-left: 7%;">
+        <img src="/images/techcrunch.jpeg" class="press-img" alt="tc-logo">
+        <img src="/images/tnw.jpeg" class="press-img" alt="tnw-logo">
+        <img src="/images/bizinsider.jpeg" class="press-img" alt="biz-insider-logo">
+        <img src="/images/mashable.jpeg" class="press-img" alt="mashable-logo">
+        <img src="/images/Nike.jpeg" class="press-img" alt="mashable-logo">
+        <img src="/images/starbucks.jpeg" class="press-img" alt="mashable-logo">
+        <img src="/images/tesla.jpeg" class="press-img" alt="mashable-logo">
+        <img src="/images/coca-cola.jpeg" class="press-img" alt="mashable-logo">
+        <img src="/images/mercedes.jpeg" class="press-img" alt="mashable-logo">
+        <img src="/images/IBM.jpeg" class="press-img" alt="mashable-logo">
+    </div>
+    <div id="newsletter">
+        <div class="newsletter-content">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 newsletter-heading">
+                    <h1 class="news-heading">Sign up to keep up with our green journey </h1>
+                    <h2 class="news-sub">Keep up with our quarterly newsletter</h2>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <form class="input" action="/" method="post">
+                        <div class="mb-3">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="first-name" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="second-name" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="second-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="termscheck">
+                            <label class="form-check-label" for="termscheck">I agree to the terms and conditions</label>
+                        </div>
+                        <div class="d-grid gap-2"><button type="submit" class="btn btn-success">Submit</button></div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<%- include("partials/footer") -%>

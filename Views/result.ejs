@@ -1,0 +1,164 @@
+<%-include("partials/header") -%>
+
+<div class="row result-bg">
+    <div class="col-lg-6 ">
+        <div class="result-bg-1" id="fadeInDiv">
+            <h1 class="result-title">
+                Your Carbon Impact Is <%= footprint %> Kg of CO<sub>2</sub>
+            </h1>
+            <h3 class="result-sh">
+                Protecting <%= area %> acres of Tropical Forest can neutralise that amount of carbon dioxide.
+            </h3>
+        </div>
+        
+    </div>
+<div class="col-lg-6 ">
+<div class="result-bg-2">
+    <h1 class="result-tit">Safeguard Global Ecology</h1>
+    <p class="result-par">Earth is the only place in this entire universe which we can call home and our home face imminent danger.
+      We must act before it's too late and an irreversible trend of ecosystem destruction starts.It may be the last call to action 
+      until that trend actually starts.So we must come together and act rapidly and responsively and offseting your carbon footprint is the 
+      first step in the fight. Therefore join us and protect our planet.
+    </p>
+</div>
+</div>
+</div>
+<div class="row compare">
+    <h1 class="result-title" style="color: black; text-align: center; text-shadow: 2px 2px rgb(177, 172, 172); padding-bottom: 1%;"> How Do You Compare?</h1>
+    <p style="text-align: center; font-weight: 300; font-family: 'roboto'; padding-bottom: 3%;">Here is your monthly carbon footprint</p>
+    <div class="col-lg-6 ">
+        <div class="chart" style="width: 60%;">
+          <div class="y-axis">
+            <div>100%</div>
+            <div>80%</div>
+            <div>60%</div>
+            <div>40%</div>
+            <div>20%</div>
+            <div>0%</div>
+          </div>
+          <div class="bars">
+            <div class="bar" style="--value: 100;"></div>
+            <div class="bar" style="--value: 75;"></div>
+          </div>
+          <div class="x-axis">
+            <div>Old Footprint</div>
+            <div>Updated Footprint</div>
+          </div>
+         <p>By employing simple steps in your life you can cut your footprint by 25%</p>
+    </div>
+    </div>
+    <div class="col-lg-6 world-col" style="margin: 0%;">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="/images/india.png" class="result-img" alt="" style="width: 80%;margin-top: 5%;">
+                <p class="india-para" style="font-size: 1.5rem;"><%= indiaResultSub %></p>
+            </div>
+            <div class="col-lg-6">
+                <img src="/images/world.png" alt="" class="result-img" style="width: 80%;margin-top: 5%;">
+                <p class="world-para" style="font-size: 1.5rem;">World Average Emission is 1567 Kg Of CO<sub>2</sub> </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="suggest">
+  <h1 style="text-align: center; font-family: poppins; padding-top: 2%;">Some eco-friendly suggestion you can adopt in daily life</h1>
+  <div class="row">
+    <div class="col-lg-4 suggestions-col">
+      <div class="card ">
+      <img class="suggestions-image" src="images/recycle.png">
+      <div class="card-body">
+        <h3 class="card-title">Recycle</h3>
+        <p>For a step as simple as recycling you
+          save 54 kgs of Co2 monthly
+        </p>
+      </div>
+    </div>
+    </div>
+        <div class="col-lg-4 suggestions-col">
+          <div class="card ">
+          <img class="suggestions-image" src="images/vacation.png">
+          <div class="card-body">
+            <h3 class="card-title">Explore Local</h3>
+            <p>By vacationing to nearby local areas
+              you save upto 85 kg of Co2 monthly
+            </p>
+          </div>
+        </div>
+        </div>
+            <div class="col-lg-4 suggestions-col">
+              <div class="card ">
+              <img class="suggestions-image" src="images/conserve.png">
+              <div class="card-body">
+                <h3 class="card-title">Conserve</h3>
+                <p>Practising good habits like rainwater harvesting
+                  could svae upto 285 Kg Co2 monthly.
+                </p>
+              </div>
+            </div>
+            </div>
+                <div class="col-lg-4 suggestions-col">
+                  <div class="card hidden">
+                  <img class="suggestions-image" src="images/bio-beauty.png">
+                  <div class="card-body">
+                    <h3 class="card-title">Bio Beauty</h3>
+                    <p>Embracing natural cosmetics over chemical
+                      can reduce 7 kgs of Co2 monthly
+                    </p>
+                  </div>
+                </div>
+                </div>
+                    <div class="col-lg-4 suggestions-col">
+                      <div class="card hidden">
+                      <img class="suggestions-image" src="images/green.png">
+                      <div class="card-body">
+                        <h3 class="card-title">Plant Paradise</h3>
+                        <p>Adopting a plant based lifestyle allows 
+                          you to reduce 40 kgs of Co2 monthly
+                        </p>
+                      </div>
+                    </div>
+                    </div>
+                        <div class="col-lg-4 suggestions-col">
+                          <div class="card hidden">
+                          <img class="suggestions-image" src="images/renew.png">
+                          <div class="card-body">
+                            <h3 class="card-title">Renewable Future</h3>
+                            <p>Using renewable sources of energy can help 
+                              reduce 13 kg of Co2 Monthly
+                            </p>
+                          </div>
+                        </div>
+                        </div>
+  </div>
+  <div class="center-button">
+  <button id="read-more-btn">Read More</button>
+</div>
+<div class="d-grid gap-2 d-md-block bottom-results"  style="text-align: center; padding-bottom:3%">
+    <a href="/offset" style="margin-right: 5%;"><button id="button" class="btn btn-primary" type="button" value= <%= percentages %> >Offset My FootPrint</button></a>
+    <a href="/"><button class="btn btn-primary" type="button">Go To Home</button></a>
+  </div>
+</div>
+
+<script>
+  const readMoreBtn = document.getElementById("read-more-btn");
+const hiddenCards = document.querySelectorAll(".hidden");
+readMoreBtn.addEventListener("click", function() {
+hiddenCards.forEach(card => {
+  card.classList.remove("hidden"); 
+});
+readMoreBtn.style.display = "none"; 
+});
+</script>
+
+  <script>
+const bars = document.querySelectorAll('.bar');
+
+bars.forEach(bar => {
+  const value = bar.style.getPropertyValue('--value');
+  bar.style.height = value + '%';
+});
+
+  </script>
+  
+<%-include("partials/footer") -%>

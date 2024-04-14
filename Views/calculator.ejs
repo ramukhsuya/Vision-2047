@@ -1,0 +1,224 @@
+<%-include("partials/header") -%>
+
+  <div class=" calc-bg" >
+    <h1 class="sign-up-heading" style="text-align: center;">Calculate Your Footprint</h1>
+    
+    <div id="steps">
+      <form action="/calculator" method="post">
+      <div class="step" id="step1">
+        <h2>Fill Out Your Daily Details</h2>
+        
+            <div class="mb-3 calc-input">
+              <label for="numpeople" class="form-label">Number of people in your house</label>
+              <input type="number" class="form-control"  name="people" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="electricity" class="form-label">Electric bill per month (in Rs)</label>
+              <input type="text" class="form-control" name="electricitybill" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="electricity" class="form-label">Electricity price in your locality(in Rs/KWh)</label>
+              <input type="text" class="form-control" name="electricityprice" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 calc-input">
+                <label for="cylinders" class="form-label">Number of l.p.g cylinders used last month</label>
+                <input type="number" class="form-control" name="cylinders" id="exampleInputPassword1">
+              </div>
+              <div class="d-grid gap-2">
+            
+              
+          <button type="button" class="btn btn-primary next-button" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+      
+      
+      
+      <div class="step" id="step2" style="display: none;">
+        <h2>How You Travel?</h2>
+        
+            <div class="mb-3 calc-input">
+              <label for="flight" class="form-label">How many times you used flight last month</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="flights">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="flight-duration" class="form-label" >Average duration of your one flight(hours)</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" name="flighthrs">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="vehicle-distance" class="form-label" >Distance Covered by your vehicle in last month</label>
+              <input type="text" class="form-control" id="exampleInputPassword2" name="vehicledis">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="mileage" class="form-label" >Mileage provided by your vehicle</label>
+              <input type="text" class="form-control" id="exampleInputPassword3" name="mileage">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="bus" class="form-label" >How many times you used bus last month</label>
+              <input type="text" class="form-control" id="exampleInputPassword4" name="bus">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="bus-distance" class="form-label" >Average distance of your one bus ride(in kms)</label>
+              <input type="text" class="form-control" id="exampleInputPassword5" name="busdis">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="train" class="form-label" >How many times you used train last month</label>
+              <input type="text" class="form-control" id="exampleInputPassword6" name="train">
+            </div>
+            <div class="mb-3 calc-input">
+              <label for="train-distance" class="form-label" >Average distance of your one train ride(in kms)</label>
+              <input type="text" class="form-control" id="exampleInputPassword7" name="traindis">
+            </div>
+
+            <div class="d-grid gap-2">
+            
+              
+              <button type="button" class="btn btn-primary next-button" onclick="nextStep()">Next</button>
+            </div>
+      </div>
+        
+      
+      <div class="step" id="step3" style="display: none;">
+        <h2>What Are Your Fooding Preferences?</h2>
+        <div class="mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="meatlover"id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Meat Lover
+            </label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="omnivore" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Average Omnivore
+            </label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value ="Vegetarian"id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Vegetarian
+            </label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="Vegan"id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Vegan
+            </label>
+          </div>
+        </div>
+        
+            <div class="d-grid gap-2">
+            
+              
+              <button type="button" class="btn btn-primary next-button" onclick="nextStep()">Next</button>
+            </div>
+          
+           
+      </div>
+      <div class="step" id="step3" style="display: none;">
+      <h2>How often you dump your garbage in landfills</h2>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" value="daily"id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Daily
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" value="twiceinaweek"id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Twice in a week
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" value="weekly"id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Weekly
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" value="Fortnightly"id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Fortnightly
+                  </label>
+                </div>
+              </div>
+              <div class="d-grid gap-2">
+            
+              
+                <button type="button" class="btn btn-primary next-button" onclick="nextStep()">Next</button>
+              </div>
+      </div>
+
+      <div class="step" id="step4" style="display: none;">
+        <h2>Step 4: Do YOU?</h2>
+            <div class="mb-3">
+              <input class="form-check-input" type="checkbox" value="re" name="newspaper" id="flexCheckDefault">
+              <label for="recycle" class="form-check-label">Recycle Newspaper</label>
+            </div>
+            <div class="mb-3">
+              <input class="form-check-input" type="checkbox" value="re" name="Aluminium" id="flexCheckDefault">
+                <label for="recycle" class="form-check-label">Recycle Aluminium</label>
+            </div>
+            <div class="mb-3 ">
+              <input class="form-check-input" type="checkbox" value="re" name="Plastic" id="flexCheckDefault">
+                <label for="recycle" class="form-check-label">Recycle Plastic</label>
+                
+            </div>
+            <div class="mb-3" >
+              <input class="form-check-input" type="checkbox" value="re" name="Glass" id="flexCheckDefault">
+                <label for="recycle" class="form-check-label">Recycle Glass</label>
+            </div>    
+
+            <div class="mb-3">
+              <input class="form-check-input" type="checkbox" value="re" name="Textile" id="flexCheckDefault">
+                 <label for="recycle" class="form-check-label">Recycle Textile</label>
+            </div>
+
+            <div class="mb-3">
+               <input class="form-check-input" type="checkbox" value="re" name="Electronics" id="flexCheckDefault">
+                  <label for="recycle" class="form-check-label">Recycle Electronics</label>
+            </div>
+                
+            <div class="d-grid gap-2">
+            
+            
+            <button type="submit" class="btn btn-primary next-button" >Find Out</button>
+          </div>
+          
+           
+      </div>
+
+    </form>
+    </div>
+      
+    </div>
+
+
+
+  
+  <script>
+    
+    const steps = document.querySelectorAll('.step');
+    let currentStep = 0;
+
+    function nextStep() {
+      steps[currentStep].style.display = 'none';
+      currentStep++;
+      steps[currentStep].style.display = 'block';
+
+      
+    }
+  </script>
+<%- include("partials/footer") -%>
