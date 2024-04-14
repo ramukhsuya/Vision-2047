@@ -220,9 +220,9 @@ app.get("/about",function(req,res)
     res.render("about");
 });
 
-app.get("/why",function(req,res)
+app.get("/research",function(req,res)
 {
-    res.render("why");
+    res.render("research");
 });
 
 app.get("/sendEmail",function(req,res)
