@@ -41,36 +41,38 @@
 }
 
 /* footer */
-
 .footer
 {
-    
-    padding:0%;
+
     text-align: center;
     padding-left: 15%;
     padding-right: 15%;
+    background-color: #FFEBB2;
 }
 .footer-head
 {
     font-style: "roboto";
     text-align: left;
-    padding-bottom: 15%;
+    padding-bottom: 10%;
     color: #000000;
     font-size: 20px;
-    margin-top: 15px;
+    margin-top: 25px;
     font-weight: 600;
-}
-.footer-head:hover
-{
-    color: #575555;
+    padding-top: 2%;
 }
 .footer-para
 {
     padding: 2%;
-    color: #918a8a;
     font-weight: 300;
     margin-bottom: 0%;
     line-height: 35px;
+    font-size: 18px;
+    font-family: "Roboto";
+}
+.footer-ending{
+
+    font-family: "alex brush";
+    font-size: 40px;
 }
 .icon-social
 {
@@ -504,7 +506,7 @@
 }
 /* signup */
 .imagebg{
-    background-image: url("/images/bg-6.jpg");
+    background-image: url("/images/bg-6-transformed.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 5%;
@@ -804,8 +806,10 @@
 .offset-head
 {
     text-align: center;
-    background-color: rgb(87, 140, 130);
     padding: 5%;
+    background-image: linear-gradient(to bottom right,  #eba165fa,#FFEBC9);
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .offset-heading
 {
@@ -832,6 +836,24 @@
 .offset-row
 {
     padding: 5%;
+}
+.result-para{
+    padding-right: 5%;
+    text-align: left;
+    font-family: "Roboto";
+    padding-top: 7%;
+}
+.result-head{
+    font-family: "poppins";
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+}
+.result{
+
+    padding-top: 5%;
+    background-image: linear-gradient(to bottom right,  #eba165fa,#FFEBC9);
+    height: 50%;
 }
 /* about */
 .header-about{
@@ -979,12 +1001,32 @@
 .about-card {
     margin-top: 2rem;
 }
+.offset-cards{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
 .objective-card{
     padding-left: 5%;
     padding-right: 5%;
     margin-left: auto;
     margin-right: auto;
 }
+.offset-card:hover{
+    animation: flicker 0.5s infinite alternate;
+}
+@keyframes flicker {
+    0% {
+      background-color:white;
+    }
+    50% {
+      background-color:#b3ffb3;
+    }
+    100% {
+      background-color: white;
+    }
+  }
 .objective-card:hover{
     background-color: #FFEBB2;
 }
