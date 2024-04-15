@@ -2,3 +2,5 @@
 
 # live demo
 https://drive.google.com/file/d/1C74IyxionNXxCfrogBXx7Tr4IIrRa8zU/view?usp=drive_link
+# deployed link
+https://vision-2047.onrender.com/
